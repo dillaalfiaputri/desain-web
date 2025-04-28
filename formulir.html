@@ -1,0 +1,175 @@
+<html>
+<head>
+    <title>Formulir Pemesanan Tiket Wisata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            color: #008CBA;
+			text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        .label {
+            width: 180px;
+            font-weight: normal;
+        }
+        .colon {
+            width: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select, 
+        textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+            margin-right: 5px;
+        }
+        label {
+            margin-right: 15px;
+        }
+        .button {
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		}
+		.button {background-color: #008CBA;} 
+        .payment-options,
+        .facility-options {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pemesanan Tiket Wisata</h1>
+        <table>
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td class="colon">:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td class="colon">:</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td class="label">No Telepon</td>
+                <td class="colon">:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td class="label">Tanggal Kunjungan</td>
+                <td class="colon">:</td>
+                <td><input type="text" placeholder="hari - bulan - tahun" required></td>
+            </tr>
+            <tr>
+                <td class="label">Jumlah Pengunjung</td>
+                <td class="colon">:</td>
+				<td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td class="label">Destinasi Wisata</td>
+                <td class="colon">:</td>
+                <td>
+                    <select>
+                        <option >-- Pilih Wisata --</option>
+                        <option >Pulau Menjangan</option>
+                        <option >Gunung Ijen</option>
+                        <option >Kawah Wurung</option>
+                        <option >Taman Baluran</option>
+                        <option >Djawatan Florest</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Pilih Paket</td>
+                <td class="colon">:</td>
+                <td>
+                    <input type="radio" name="paket" id="ekonomi">
+                    <label for="ekonomi">Ekonomi</label>
+                    <input type="radio" name="paket" id="standar">
+                    <label for="standar">Standar</label>
+                    <input type="radio" name="paket" id="premium">
+                    <label for="premium">Premium</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Fasilitas Tambahan</td>
+                <td class="colon">:</td>
+                <td class="facility-options">
+                    <div>
+                        <input type="checkbox" name="fasilitas[]" id="makan">
+                        <label for="makan">Makan Siang</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="fasilitas[]" id="transport">
+                        <label for="transport">Transportasi Lokal</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="fasilitas[]" id="guide">
+                        <label for="guide">Pemandu Wisata</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Metode Pembayaran</td>
+                <td class="colon">:</td>
+                <td class="payment-options">
+                    <input type="radio" name="pembayaran" id="transfer">
+                    <label for="transfer">Transfer Bank</label>
+                    <input type="radio" name="pembayaran" id="kartu">
+                    <label for="kartu">Kartu Kredit</label>
+                    <input type="radio" name="pembayaran" id="ewallet">
+                    <label for="ewallet">E-Wallet</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Catatan Khusus</td>
+                <td class="colon">:</td>
+                <td><textarea name="catatan" placeholder="Jika ada permintaan khusus"></textarea></td>
+            </tr>
+			 <tr>
+                <td colspan="3" style="text-align: center; padding-top: 15px;">
+			<button class="button">PESAN TIKET</button>
+			</td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
